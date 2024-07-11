@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="table_form.css">
+  <link rel="stylesheet" href="table_form_delete_modify_buttons.css">
+
+  <script src="table_form.js" defer></script>
+  <script src="table_form_APIS.js" defer></script>
+  <script src="cookies.js" defer></script>
+
+  <title>Client Įvedimas</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h1>Add a Client</h1>
+      <div class="form-group">
+        <label for="name">Vardas:</label>
+        <textarea id="name"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="surname">Pavardė:</label>
+        <textarea id="surname"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Elektroninis paštas:</label>
+        <textarea id="email"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Telefono numeris:</label>
+        <textarea id="phone"></textarea>
+      </div>
+
+      <div class="button-group">
+        <button id="clickButtonSend" onclick="sendClicked()">Send</button>
+        <button id="clickButtonEdit" onclick="editClientCliked()">Edit</button>
+      </div>
+      <p id="test">Response: </p>
+    </div>
+
+    <div class="table-container">
+      <table class="event-table" id="clientTable">
+        <thead>
+          <tr>
+            <th style="text-align: left">Client Id</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>E-mail</th>
+            <th>Phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Clients will be dynamically inserted here -->
+        </tbody>
+      </table>
+    </div>
+  </div> 
+
+  <input type="hidden" id="hiddenInput" name="hiddenData" value="secretValue">
+
+</body>
+</html>
